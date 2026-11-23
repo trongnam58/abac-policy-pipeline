@@ -46,7 +46,7 @@ def safe_llm_policy(policy: Policy, client: LLMClient) -> "Policy | None":
     data.setdefault("conditions", [])
     try:
         return Policy.from_dict(data)
-    except (KeyError, TypeError, ValueError):
+    except (KeyError, TypeError, ValueError, AttributeError):
         return None
 
 

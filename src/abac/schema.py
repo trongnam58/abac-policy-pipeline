@@ -30,23 +30,34 @@ class Action:
 class Resource:
     label: str = ""
     entity_type: str = "resource"
+    # cặp thuộc tính–giá trị của lớp tài nguyên (vd. {"level": "department"})
+    attributes: dict[str, str] = field(default_factory=dict)
+    # ràng buộc đếm, vd. "at most one graduation project topic" -> ("<=", 1)
+    count_operator: Optional[str] = None
+    count: Optional[int] = None
 
 
 @dataclass
 class Environment:
     id: str = "env"
-    env_type: str = "network"          # network | temporal | location | device
+    env_type: str = "network"          # network | temporal | duration | location | device
     namespace: Optional[str] = None
     trigger_phrase: Optional[str] = None
     time_from: Optional[str] = None
     time_to: Optional[str] = None
     raw: Optional[str] = None
+    # ràng buộc thời lượng, vd. "more than 560 hours per year"
+    operator: Optional[str] = None     # < | <= | = | <> | > | >=
+    value: Optional[float] = None
+    unit: Optional[str] = None         # giá trị enum TimeUnit
+    period: Optional[str] = None       # year | month | week | day
 
 
 @dataclass
 class Condition:
     text: str = ""
-    kind: str = "condition"            # condition | restriction | approval | precondition
+    kind: str = "condition"            # condition | restriction | approval | precondition | scope | subject_scope
+    normalized: Optional[str] = None   # dạng chuẩn hoá dùng cho consideredContext
 
 
 @dataclass
@@ -60,6 +71,7 @@ class Policy:
     resource: Optional[Resource] = None
     environments: list[Environment] = field(default_factory=list)
     conditions: list[Condition] = field(default_factory=list)
+    logical_operator: str = "and"      # and | or — nối các giá trị thay thế cùng thuộc tính
 
     def to_dict(self) -> dict:
         return _to_dict(self)
@@ -99,12 +111,49 @@ def _to_dict(obj):
     return obj
 
 
+OCL_OPERATORS = ("<", "<=", "=", "<>", ">", ">=")
+TIME_UNITS = ("seconds", "minutes", "hours", "days", "months", "years", "am", "pm")
+
+
+def _environment_from_dict(e: dict) -> Environment:
+    """Dựng Environment và loại giá trị không hợp lệ (vd. JSON do LLM sinh)."""
+    env = Environment(**{k: e.get(k) for k in (
+        "id", "env_type", "namespace", "trigger_phrase", "time_from", "time_to", "raw",
+        "operator", "value", "unit", "period")})
+    env.id = env.id or "env"
+    env.env_type = env.env_type or "network"
+    try:
+        env.value = float(env.value) if env.value is not None else None
+    except (TypeError, ValueError):
+        env.value = None
+    if env.operator not in OCL_OPERATORS:
+        env.operator = None
+    if env.unit not in TIME_UNITS:
+        env.unit = None
+    if env.value is None or env.unit is None:
+        env.value, env.unit, env.operator = None, None, None
+    return env
+
+
+def _resource_from_dict(r: dict) -> Resource:
+    res = Resource(label=r.get("label") or "", entity_type=r.get("entity_type") or "resource",
+                   attributes=dict(r.get("attributes") or {}))
+    try:
+        count = int(r["count"]) if r.get("count") is not None else None
+    except (TypeError, ValueError):
+        count = None
+    if count is not None and count >= 0 and r.get("count_operator") in OCL_OPERATORS:
+        res.count_operator, res.count = r["count_operator"], count
+    return res
+
+
 def _policy_from_dict(d: dict) -> Policy:
     p = Policy(
         id=int(d.get("id", 0)),
         sentence=d.get("sentence", ""),
         decision=d.get("decision", "permit"),
         modality=d.get("modality", "can"),
+        logical_operator=d.get("logical_operator") or "and",
     )
     for s in d.get("subjects", []):
         p.subjects.append(Subject(**{k: s.get(k) for k in ("role", "entity_type", "membership", "position")}))
@@ -112,12 +161,11 @@ def _policy_from_dict(d: dict) -> Policy:
         p.actions.append(Action(**{k: a.get(k) for k in ("verb", "operation")}))
     r = d.get("resource")
     if r:
-        p.resource = Resource(**{k: r.get(k) for k in ("label", "entity_type")})
-    for e in d.get("environments", []):
-        p.environments.append(Environment(**{k: e.get(k) for k in (
-            "id", "env_type", "namespace", "trigger_phrase", "time_from", "time_to", "raw")}))
+        p.resource = _resource_from_dict(r)
+    for e in d.get("environments") or []:
+        p.environments.append(_environment_from_dict(e))
     for c in d.get("conditions", []):
-        p.conditions.append(Condition(**{k: c.get(k) for k in ("text", "kind")}))
+        p.conditions.append(Condition(**{k: c.get(k) for k in ("text", "kind", "normalized")}))
     return p
 
 
