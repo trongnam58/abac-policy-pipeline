@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 """Sinh sơ đồ PlantUML (.puml) cho từng chính sách.
 
-W1: sơ đồ thể hiện (instance) để nhìn nhanh chủ thể – hành động – đối tượng –
-ngữ cảnh. W2 sẽ dựng biểu đồ lớp đầy đủ theo siêu mô hình.
+- policy_to_puml: sơ đồ thể hiện từng chính sách (chủ thể – hành động – đối tượng – ngữ cảnh);
+- model_to_puml : sơ đồ lớp của mô hình biểu diễn (tương đương Fig. 8 của bài báo).
 """
 from __future__ import annotations
 
 from ..schema import Policy
+from . import metamodel as mm
+from .use_model import RepresentationModel
 
 
 def _clean(text: str, limit: int = 70) -> str:
@@ -64,3 +66,27 @@ def policy_to_puml(p: Policy) -> str:
 def dataset_to_puml(policies: list[Policy]) -> str:
     parts = [policy_to_puml(p) for p in policies]
     return "\n\n' ====================\n\n".join(parts)
+
+
+_MULT = {"*": "*", "1": "1", "1..*": "1..*"}
+
+
+def model_to_puml(model: RepresentationModel) -> str:
+    """Sơ đồ lớp: lớp, enum, liên kết và associationclass Context."""
+    lines = ["@startuml", "skinparam shadowing false", "hide empty methods"]
+    for name, values in model.enums.items():
+        lines.append(f"enum {name} {{")
+        lines += [f"  {v}" for v in values]
+        lines.append("}")
+    for cls, attrs in model.classes.items():
+        lines.append(f"class {cls} {{")
+        lines += [f"  {n} : {t}" for n, t in attrs]
+        lines.append("}")
+    for kind, name, (c1, m1, r1), (c2, m2, r2) in model.associations:
+        arrow = "o--" if kind == "aggregation" else "--"
+        lines.append(f'{c1} "{r1} {_MULT.get(m1, m1)}" {arrow} "{r2} {_MULT.get(m2, m2)}" {c2}')
+    (a, ma, ra), (e, me, re_) = mm.CONTEXT_ENDS
+    lines.append(f'{a} "{ra} {ma}" -- "{re_} {me}" {e}')
+    lines.append(f"({a}, {e}) .. {mm.ASSOCIATION_CLASS}")
+    lines.append("@enduml")
+    return "\n".join(lines)

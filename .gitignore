@@ -6,3 +6,5 @@ out_vi/
 *.log
 .DS_Store
 ~$*
+.coverage
+.pytest_cache/

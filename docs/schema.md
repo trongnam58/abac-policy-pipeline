@@ -22,7 +22,8 @@ Một dataset gồm danh sách policy; mỗi policy tương ứng một câu NLP
 | actions | list[Action] | hành động kèm toán tử chuẩn hoá |
 | resource | Resource? | đối tượng/tài nguyên |
 | environments | list[Environment] | ngữ cảnh mạng/thời gian/… |
-| conditions | list[Condition] | điều kiện phụ (if, only if, after, approval…) |
+| conditions | list[Condition] | điều kiện ngữ cảnh (scope, subject_scope, if, only if, after, approval…) |
+| logical_operator | `and` \| `or` | toán tử logic nối các lựa chọn thay thế (vd. "academic affairs or finance office") |
 
 ## Subject / Action / Resource / Environment / Condition
 
@@ -30,9 +31,9 @@ Một dataset gồm danh sách policy; mỗi policy tương ứng một câu NLP
 |---|---|
 | Subject | role, entity_type, membership?, position? |
 | Action | verb, operation (`READ`, `UPLOAD`, `DOWNLOAD`, `NUMBER`…) |
-| Resource | label, entity_type |
-| Environment | id, env_type (`network`/`temporal`/…), namespace?, trigger_phrase?, time_from?, time_to?, raw? |
-| Condition | text, kind (`condition`/`restriction`/`approval`/`precondition`) |
+| Resource | label, entity_type, attributes (`{"level": "department"}`), count_operator? + count? (ràng buộc đếm, vd. "at most one" → `<=`, 1) |
+| Environment | id, env_type (`network`/`temporal`/`duration`), namespace?, trigger_phrase?, time_from?, time_to?, raw?, operator? (`<`,`<=`,`=`,`<>`,`>`,`>=`), value?, unit? (TimeUnit), period? |
+| Condition | text, kind (`scope`/`subject_scope`/`condition`/`restriction`/`approval`/`precondition`), normalized (dùng cho `consideredContext`) |
 
 ## Ví dụ rút gọn
 

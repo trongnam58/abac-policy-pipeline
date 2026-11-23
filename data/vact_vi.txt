@@ -1,0 +1,100 @@
+Sinh viên dân sự có thể xem bảng điểm cuối kỳ của chính mình trong hệ thống thông tin học vụ đối với các môn học mà họ đã học.
+Sinh viên dân sự có thể xem điểm của chính mình trong hệ thống quản lý học tập đối với các bài thi trắc nghiệm mà họ đã làm.
+Giảng viên có thể xem điểm của tất cả sinh viên dân sự trong hệ thống quản lý học tập đối với các môn học mà họ giảng dạy.
+Người dùng thuộc phòng khảo thí và bảo đảm chất lượng giáo dục có thể xem điểm của tất cả sinh viên dân sự trong hệ thống quản lý học tập đối với tất cả các môn học.
+Người dùng thuộc phòng công tác học vụ có thể xem điểm của tất cả sinh viên dân sự trong hệ thống quản lý học tập đối với tất cả các môn học.
+Giảng viên phụ trách môn học có thể thêm và xem điểm trong hệ thống quản lý học tập đối với môn học đó.
+Giảng viên phụ trách môn học có thể cập nhật điểm và gán điểm cuối kỳ trong hệ thống quản lý học tập đối với các môn học của mình, với sự phê duyệt của trưởng khoa và trưởng phòng khảo thí và bảo đảm chất lượng giáo dục.
+Điều phối viên học vụ của khoa có thể xem điểm của tất cả sinh viên dân sự trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Trưởng khoa có thể xem điểm của tất cả sinh viên dân sự trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Người dùng thuộc phòng khảo thí và bảo đảm chất lượng giáo dục có thể sửa điểm cuối kỳ của sinh viên dân sự trong hệ thống thông tin học vụ với sự phê duyệt của trưởng phòng đó.
+Sinh viên dân sự có thể xem danh sách lớp trong hệ thống quản lý học tập đối với các môn học mà họ đang theo học.
+Giảng viên phụ trách môn học có thể xem và tải xuống danh sách lớp của môn học trong hệ thống quản lý học tập đối với môn học đó.
+Điều phối viên học vụ của khoa có thể xem và tải xuống danh sách lớp trong hệ thống thông tin học vụ và hệ thống quản lý học tập đối với các môn học của khoa đó.
+Trưởng khoa có thể xem và tải xuống danh sách lớp trong hệ thống thông tin học vụ và hệ thống quản lý học tập đối với các môn học của khoa đó.
+Người dùng thuộc phòng công tác học vụ có thể xem và sửa tất cả danh sách lớp trong hệ thống thông tin học vụ và hệ thống quản lý học tập.
+Người dùng thuộc phòng công tác học vụ có thể tải lên và tải xuống danh sách lớp của môn học trong hệ thống thông tin học vụ và hệ thống quản lý học tập.
+Người dùng thuộc phòng công tác học vụ có thể xóa danh sách lớp của môn học trong hệ thống thông tin học vụ và hệ thống quản lý học tập.
+Sinh viên dân sự có thể xem và tải xuống bảng điểm của chính mình trong hệ thống thông tin học vụ.
+Trưởng khoa có thể xem và tải xuống bảng điểm của tất cả sinh viên dân sự trong hệ thống thông tin học vụ đối với khoa đó.
+Người dùng thuộc phòng công tác học vụ có thể xem và tải xuống bảng điểm của tất cả sinh viên dân sự trong hệ thống thông tin học vụ.
+Người dùng thuộc phòng khảo thí và bảo đảm chất lượng giáo dục có thể xem và tải xuống bảng điểm của tất cả sinh viên dân sự trong hệ thống thông tin học vụ.
+Trưởng phòng công tác học vụ có thể sửa bảng điểm của sinh viên dân sự trong hệ thống thông tin học vụ với sự phê duyệt của giám đốc.
+Lý do sửa bảng điểm phải được ghi nhận trong hệ thống thông tin học vụ sau khi trưởng phòng công tác học vụ sửa bảng điểm của sinh viên dân sự.
+Người nộp đơn có thể kiểm tra trạng thái đơn của chính mình trong hệ thống thông tin học vụ.
+Người dùng thuộc phòng công tác học vụ có thể xem và cập nhật trạng thái đơn của tất cả người nộp đơn trong hệ thống thông tin học vụ.
+Người nộp đơn có thể sửa đơn trong hệ thống thông tin học vụ.
+Người nộp đơn có thể tải lên và tải xuống đơn trong hệ thống thông tin học vụ.
+Người nộp đơn có thể xóa đơn trong hệ thống thông tin học vụ chỉ khi đơn đang ở trạng thái chờ xử lý.
+Giảng viên phụ trách môn học có thể tạo bài thi trắc nghiệm và xem chi tiết của chúng trong hệ thống quản lý học tập.
+Giảng viên phụ trách môn học có thể sửa và xóa bài thi trắc nghiệm trong hệ thống quản lý học tập.
+Giảng viên phụ trách môn học có thể tải lên và tải xuống bài thi trắc nghiệm trong hệ thống quản lý học tập.
+Điều phối viên học vụ của khoa có thể xem và tải xuống bài thi trắc nghiệm trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Trưởng khoa có thể xem và đánh giá bài thi trắc nghiệm trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Trưởng khoa có thể tải lên và tải xuống bài thi trắc nghiệm trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Trưởng phòng công tác học vụ có thể xem và đánh giá bài thi trắc nghiệm trong hệ thống quản lý học tập đối với tất cả các môn học.
+Trưởng phòng công tác học vụ có thể tải xuống bài thi trắc nghiệm từ hệ thống quản lý học tập đối với tất cả các môn học.
+Trưởng phòng khảo thí và bảo đảm chất lượng giáo dục có thể xem và đánh giá bài thi trắc nghiệm trong hệ thống quản lý học tập đối với tất cả các môn học.
+Trưởng phòng khảo thí và bảo đảm chất lượng giáo dục có thể tải xuống bài thi trắc nghiệm từ hệ thống quản lý học tập đối với tất cả các môn học.
+Giảng viên phụ trách môn học có thể tạo và xem tài liệu học tập trong hệ thống quản lý học tập đối với môn học đó.
+Giảng viên phụ trách môn học có thể tải lên và tải xuống tài liệu học tập trong hệ thống quản lý học tập.
+Giảng viên phụ trách môn học có thể sửa và xóa tài liệu học tập trong hệ thống quản lý học tập.
+Sinh viên dân sự có thể xem và tải xuống tài liệu học tập trong hệ thống quản lý học tập đối với các môn học mà họ đang theo học.
+Sinh viên dân sự có thể bình luận về tài liệu học tập trong hệ thống quản lý học tập đối với các môn học mà họ đang theo học.
+Điều phối viên học vụ của khoa có thể xem và tải xuống tài liệu học tập trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Trưởng khoa có thể xem và đánh giá tài liệu học tập trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Trưởng khoa có thể tải lên và tải xuống tài liệu học tập trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Trưởng phòng công tác học vụ có thể xem và đánh giá tài liệu học tập của tất cả các môn học trong hệ thống quản lý học tập.
+Trưởng phòng công tác học vụ có thể tải xuống tài liệu học tập của tất cả các môn học từ hệ thống quản lý học tập.
+Trưởng phòng khảo thí và bảo đảm chất lượng giáo dục có thể xem và đánh giá tài liệu học tập trong hệ thống quản lý học tập đối với tất cả các môn học.
+Trưởng phòng khảo thí và bảo đảm chất lượng giáo dục có thể tải xuống tài liệu học tập từ hệ thống quản lý học tập đối với tất cả các môn học.
+Người dùng thuộc phòng công tác học vụ có thể tạo và xem đề nghị mở môn học trong hệ thống thông tin học vụ.
+Người dùng thuộc phòng công tác học vụ có thể sửa và xóa đề nghị mở môn học trong hệ thống thông tin học vụ.
+Giảng viên phụ trách môn học có thể xem và bình luận về đề nghị mở môn học trong hệ thống thông tin học vụ.
+Giảng viên phụ trách môn học có thể chấp nhận hoặc từ chối đề nghị mở môn học trong hệ thống thông tin học vụ.
+Điều phối viên học vụ và trưởng khoa có thể xem và bình luận về đề nghị mở môn học trong hệ thống thông tin học vụ.
+Sinh viên dân sự không thể đăng ký môn học trong hệ thống đăng ký môn học nếu họ còn nợ học phí vượt quá mức quy định.
+Sinh viên dân sự không thể đăng ký môn học trong hệ thống đăng ký môn học nếu tổng số tín chỉ đã đăng ký vượt quá mức quy định.
+Sinh viên dân sự không thể đăng ký môn học trong hệ thống đăng ký môn học nếu họ chưa đạt các môn học tiên quyết.
+Sinh viên dân sự không thể đăng ký hai môn học trong hệ thống đăng ký môn học nếu các môn học đó có lịch học trùng nhau.
+Sinh viên dân sự chỉ có thể đăng ký các môn học đang mở trong hệ thống đăng ký môn học.
+Sinh viên dân sự không thể đăng ký các môn học đã đóng trong hệ thống đăng ký môn học.
+Sinh viên dân sự không thể đăng ký môn học trong hệ thống đăng ký môn học nếu số sinh viên dân sự đã đăng ký đạt sức chứa quy định.
+Sinh viên dân sự có thể hủy đăng ký trong hệ thống đăng ký môn học đối với môn học mà họ đã đăng ký thành công trước đó.
+Sinh viên dân sự không thể hủy đăng ký trong hệ thống đăng ký môn học đối với môn học đã đóng.
+Sinh viên dân sự có thể xem trạng thái của các môn học đã đăng ký trong hệ thống đăng ký môn học.
+Sinh viên dân sự không thể đăng ký môn học trong hệ thống đăng ký môn học nếu hệ thống chưa được kích hoạt.
+Người dùng thuộc phòng công tác học vụ có thể xem kết quả đăng ký môn học của tất cả sinh viên dân sự trong hệ thống đăng ký môn học.
+Thời khóa biểu của sinh viên dân sự chỉ được phép trong hệ thống thông tin học vụ trong khoảng từ 7:00 sáng đến 5:25 chiều.
+Lịch giảng dạy của giảng viên chỉ được phép trong hệ thống thông tin học vụ trong khoảng từ 7:00 sáng đến 5:25 chiều.
+Trưởng khoa có thể xem kết quả đăng ký môn học của tất cả sinh viên dân sự trong hệ thống thông tin học vụ đối với khoa đó.
+Điều phối viên học vụ của khoa có thể xem kết quả đăng ký môn học của tất cả sinh viên dân sự trong hệ thống thông tin học vụ đối với khoa đó.
+Sinh viên dân sự có thể học lại một môn học trong hệ thống đăng ký môn học ngay cả khi sức chứa quy định dành cho sinh viên dân sự đã đăng ký đã đạt tối đa.
+Điều phối viên học vụ của khoa và giảng viên hướng dẫn có thể tải lên và xem chi tiết các đề tài đồ án tốt nghiệp được đề xuất trong hệ thống quản lý học tập.
+Sinh viên dân sự có thể đăng ký đề tài đồ án tốt nghiệp chỉ khi hệ thống được kích hoạt.
+Một đồ án tốt nghiệp có thể có tối đa hai giảng viên hướng dẫn.
+Sinh viên dân sự có thể đăng ký tối đa một đề tài đồ án tốt nghiệp trong hệ thống quản lý học tập từ danh sách các đề tài được đề xuất do giảng viên hướng dẫn tải lên.
+Sinh viên dân sự có thể đăng ký tối đa ba giảng viên hướng dẫn ưu tiên trong hệ thống quản lý học tập.
+Giảng viên hướng dẫn có thể chấp nhận hoặc từ chối đơn đăng ký đề tài đồ án tốt nghiệp của sinh viên dân sự trong hệ thống quản lý học tập.
+Sinh viên dân sự có thể xem chi tiết các đề tài đồ án tốt nghiệp mà giảng viên hướng dẫn đã tải lên trong hệ thống quản lý học tập.
+Trưởng khoa có thể xem chi tiết tất cả các đề tài đồ án tốt nghiệp trong hệ thống quản lý học tập đối với khoa đó.
+Người dùng thuộc phòng công tác học vụ có thể xem chi tiết tất cả các đề tài đồ án tốt nghiệp trong hệ thống quản lý học tập.
+Điều phối viên học vụ và trưởng khoa có thể xem danh sách sinh viên dân sự trong hệ thống quản lý học tập đã đăng ký thành công đề tài đồ án tốt nghiệp thuộc khoa đó.
+Điều phối viên học vụ và trưởng khoa có thể xem danh sách sinh viên dân sự trong hệ thống quản lý học tập thuộc khoa đó và chưa đăng ký đề tài đồ án tốt nghiệp.
+Giảng viên hướng dẫn có thể sửa chi tiết các đề tài đồ án tốt nghiệp do mình đề xuất trong hệ thống quản lý học tập.
+Giảng viên hướng dẫn có thể xóa các đề tài đồ án tốt nghiệp do mình đề xuất trong hệ thống quản lý học tập.
+Sinh viên dân sự không thể đăng ký đề tài đồ án tốt nghiệp cho đến khi hệ thống được kích hoạt.
+Người dùng thuộc phòng công tác học vụ hoặc phòng tài chính có thể xem chi tiết hợp đồng giảng viên thỉnh giảng trong hệ thống quản lý giảng viên thỉnh giảng.
+Người dùng không thuộc phòng công tác học vụ không thể đánh số hợp đồng giảng viên thỉnh giảng trong hệ thống quản lý giảng viên thỉnh giảng.
+Người dùng không thuộc phòng công tác học vụ hoặc phòng tài chính không thể xuất toàn bộ hợp đồng giảng viên thỉnh giảng từ hệ thống quản lý giảng viên thỉnh giảng.
+Điều phối viên học vụ và trưởng khoa có thể xem chi tiết hợp đồng giảng viên thỉnh giảng trong hệ thống quản lý giảng viên thỉnh giảng.
+Điều phối viên học vụ của khoa có thể xuất hợp đồng giảng viên thỉnh giảng trong hệ thống quản lý giảng viên thỉnh giảng chỉ đối với khoa đó.
+Hợp đồng giảng viên thỉnh giảng cho các lớp chỉ được coi là hợp lệ sau khi được phòng tài chính phê duyệt.
+Hợp đồng giảng viên thỉnh giảng chỉ có thể được cấp trong hệ thống quản lý giảng viên thỉnh giảng nếu hợp đồng đã được đánh số, xác thực và xuất.
+Phòng tài chính có thể phê duyệt các lớp của giảng viên thỉnh giảng trong hệ thống quản lý giảng viên thỉnh giảng chỉ khi tổng số giờ giảng dạy của giảng viên thỉnh giảng trong năm không vượt quá mức quy định.
+Giảng viên thỉnh giảng chưa nghỉ hưu không thể giảng dạy quá 280 giờ mỗi năm.
+Giảng viên thỉnh giảng đã nghỉ hưu không thể giảng dạy quá 560 giờ mỗi năm.
+Điều phối viên học vụ của khoa không thể sửa thông tin hợp đồng giảng viên thỉnh giảng trong hệ thống quản lý giảng viên thỉnh giảng sau khi được phòng công tác học vụ hoặc phòng tài chính phê duyệt.
+Điều phối viên học vụ của khoa có thể sửa hợp đồng giảng viên thỉnh giảng trong hệ thống quản lý giảng viên thỉnh giảng chỉ khi ban giám đốc đã từ chối phê duyệt hợp đồng đó.
+Hợp đồng giảng viên thỉnh giảng hợp lệ phải có số hợp đồng trong hệ thống quản lý giảng viên thỉnh giảng.
+Giảng viên thỉnh giảng có thể xem các hợp đồng giảng viên thỉnh giảng đã được cấp của mình trong hệ thống quản lý giảng viên thỉnh giảng.
