@@ -91,3 +91,7 @@ tests/test_smoke.py         # 8 smoke test
 - `validator.py` là bộ lọc nhẹ; kiểm chứng chính thức bằng **USE headless** ở W3.
 - LLM chỉ nên gọi cho câu khó; hybrid hiện gọi cho mọi câu — W3 sẽ thêm bộ chọn câu
   (rules trả thiếu thành phần hoặc câu có mẫu phủ định/mệnh đề ghép) để giảm chi phí.
+
+## Giấy phép
+
+Mã nguồn phát hành theo giấy phép MIT (xem `LICENSE`).

@@ -2,7 +2,7 @@
 """Ba mẫu IP (invariant pattern) của mô-đun 3.
 
 Dùng làm tài liệu tham chiếu và là khuôn sinh bất biến; nội dung bám theo
-bài báo gốc:
+ba mẫu IP đã công bố:
   - ContextualUser            : kiểm tra quyền thực thi theo thuộc tính User + Context
   - ContextualUserObjectType  : thêm ràng buộc trên ObjectType (tài nguyên phi con người)
   - ContextualUserRestricted  : cấm thực thi (executed = false)

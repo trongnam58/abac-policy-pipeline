@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Siêu mô hình ABAC theo ngữ cảnh (rút gọn theo bài báo gốc).
+"""Siêu mô hình ABAC theo ngữ cảnh (rút gọn theo kiến trúc ba mô-đun đã công bố).
 
 9 lớp UML và 11 kiểu liệt kê; giữ nguyên cấu trúc để W2/W3 dựng mô hình
 `.use` / `.puml` nhất quán với báo cáo.
