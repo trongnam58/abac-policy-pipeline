@@ -1,0 +1,20 @@
+Sinh viên dân sự có thể xem bảng điểm cuối kỳ của chính mình trong hệ thống thông tin học vụ đối với các môn học mà họ đã học.
+Sinh viên dân sự có thể xem điểm của chính mình trong hệ thống quản lý học tập đối với các bài thi trắc nghiệm mà họ đã làm.
+Giảng viên có thể xem điểm của tất cả sinh viên dân sự trong hệ thống quản lý học tập đối với các môn học mà họ giảng dạy.
+Người dùng thuộc phòng công tác học vụ có thể xem điểm của tất cả sinh viên dân sự trong hệ thống quản lý học tập đối với tất cả các môn học.
+Giảng viên phụ trách môn học có thể thêm và xem điểm trong hệ thống quản lý học tập đối với môn học đó.
+Giảng viên phụ trách môn học có thể cập nhật điểm và gán điểm cuối kỳ trong hệ thống quản lý học tập đối với các môn học của mình, với sự phê duyệt của trưởng khoa và trưởng phòng khảo thí và bảo đảm chất lượng giáo dục.
+Trưởng khoa có thể xem điểm của tất cả sinh viên dân sự trong hệ thống quản lý học tập đối với các môn học của khoa đó.
+Người dùng thuộc phòng khảo thí và bảo đảm chất lượng giáo dục có thể sửa điểm cuối kỳ của sinh viên dân sự trong hệ thống thông tin học vụ với sự phê duyệt của trưởng phòng đó.
+Sinh viên dân sự có thể xem danh sách lớp trong hệ thống quản lý học tập đối với các môn học mà họ đang theo học.
+Giảng viên phụ trách môn học có thể xem và tải xuống danh sách lớp của môn học trong hệ thống quản lý học tập đối với môn học đó.
+Người dùng thuộc phòng công tác học vụ có thể tải lên và tải xuống danh sách lớp của môn học trong hệ thống thông tin học vụ và hệ thống quản lý học tập.
+Sinh viên dân sự có thể xem và tải xuống bảng điểm của chính mình trong hệ thống thông tin học vụ.
+Trưởng khoa có thể xem và tải xuống bảng điểm của tất cả sinh viên dân sự trong hệ thống thông tin học vụ đối với khoa đó.
+Người nộp đơn có thể kiểm tra trạng thái đơn của chính mình trong hệ thống thông tin học vụ.
+Người nộp đơn có thể xóa đơn trong hệ thống thông tin học vụ chỉ khi đơn đang ở trạng thái chờ xử lý.
+Sinh viên dân sự không thể đăng ký môn học trong hệ thống đăng ký môn học nếu họ còn nợ học phí vượt quá mức quy định.
+Sinh viên dân sự không thể đăng ký môn học trong hệ thống đăng ký môn học nếu hệ thống chưa được kích hoạt.
+Sinh viên dân sự có thể đăng ký đề tài đồ án tốt nghiệp chỉ khi hệ thống được kích hoạt.
+Thời khóa biểu của sinh viên dân sự chỉ được phép trong hệ thống thông tin học vụ trong khoảng từ 7:00 sáng đến 5:25 chiều.
+Giảng viên thỉnh giảng đã nghỉ hưu không thể giảng dạy quá 560 giờ mỗi năm.

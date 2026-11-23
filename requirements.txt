@@ -1,0 +1,5 @@
+# Skeleton chạy bằng stdlib; các gói dưới đây là nâng cấp tùy chọn.
+# pydantic>=2.5      # schema validate chặt (thay dataclass trong src/abac/schema.py)
+# jinja2>=3.1        # template .use/.puml khi cần nhiều biến thể
+# spacy>=3.7         # nhánh NLP tiếng Anh (W2)
+# underthesea>=6.8   # nhánh NLP tiếng Việt (W2)

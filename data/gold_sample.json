@@ -1,0 +1,192 @@
+{
+  "domain": "education",
+  "source": "vact",
+  "policies": [
+    {
+      "id": 1, "sentence": "Civilian students can view their own final grades in the academic information system for courses that they have taken.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "student", "entity_type": "user", "membership": "civilian"}],
+      "actions": [{"verb": "view", "operation": "READ"}],
+      "resource": {"label": "final grades", "entity_type": "grade"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "academic_information_system"}],
+      "conditions": []
+    },
+    {
+      "id": 2, "sentence": "Civilian students can view their own scores in the learning management system for multiple-choice exams that they have taken.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "student", "entity_type": "user", "membership": "civilian"}],
+      "actions": [{"verb": "view", "operation": "READ"}],
+      "resource": {"label": "scores", "entity_type": "score"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "learning_management_system"}],
+      "conditions": []
+    },
+    {
+      "id": 3, "sentence": "Lecturers can view the scores of all civilian students in the learning management system for courses that they teach.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "lecturer", "entity_type": "user"}],
+      "actions": [{"verb": "view", "operation": "READ"}],
+      "resource": {"label": "scores", "entity_type": "score"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "learning_management_system"}],
+      "conditions": []
+    },
+    {
+      "id": 4, "sentence": "Users in the academic affairs office can view the scores of all civilian students in the learning management system for all courses.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "staff", "entity_type": "user", "position": "academic_affairs_office"}],
+      "actions": [{"verb": "view", "operation": "READ"}],
+      "resource": {"label": "scores", "entity_type": "score"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "learning_management_system"}],
+      "conditions": []
+    },
+    {
+      "id": 5, "sentence": "The course lecturer can add and view scores in the learning management system for that course.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "lecturer", "entity_type": "user"}],
+      "actions": [{"verb": "add", "operation": "CREATE"}, {"verb": "view", "operation": "READ"}],
+      "resource": {"label": "scores", "entity_type": "score"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "learning_management_system"}],
+      "conditions": []
+    },
+    {
+      "id": 6, "sentence": "Course lecturers can update scores and assign final grades in the learning management system for their courses, with approval from the department chair and the head of educational testing and quality assurance.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "lecturer", "entity_type": "user"}],
+      "actions": [{"verb": "update", "operation": "UPDATE"}, {"verb": "assign", "operation": "ASSIGN"}],
+      "resource": {"label": "final grades", "entity_type": "grade"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "learning_management_system"}],
+      "conditions": [{"text": "approval from the department chair and the head of educational testing and quality assurance", "kind": "approval"}]
+    },
+    {
+      "id": 7, "sentence": "A department chair can view the scores of all civilian students in the learning management system for that department's courses.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "department_chair", "entity_type": "user"}],
+      "actions": [{"verb": "view", "operation": "READ"}],
+      "resource": {"label": "scores", "entity_type": "score"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "learning_management_system"}],
+      "conditions": []
+    },
+    {
+      "id": 8, "sentence": "Users in the educational testing and quality assurance office can modify civilian students' final grades in the academic information system with the approval of the head of that office.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "staff", "entity_type": "user", "position": "testing_qa_office"}],
+      "actions": [{"verb": "modify", "operation": "UPDATE"}],
+      "resource": {"label": "final grades", "entity_type": "grade"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "academic_information_system"}],
+      "conditions": [{"text": "approval of the head of that office", "kind": "approval"}]
+    },
+    {
+      "id": 9, "sentence": "Civilian students can view rosters in the learning management system for courses that they are taking.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "student", "entity_type": "user", "membership": "civilian"}],
+      "actions": [{"verb": "view", "operation": "READ"}],
+      "resource": {"label": "rosters", "entity_type": "roster"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "learning_management_system"}],
+      "conditions": []
+    },
+    {
+      "id": 10, "sentence": "The course lecturer can view and download the course roster in the learning management system for that course.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "lecturer", "entity_type": "user"}],
+      "actions": [{"verb": "view", "operation": "READ"}, {"verb": "download", "operation": "DOWNLOAD"}],
+      "resource": {"label": "course rosters", "entity_type": "roster"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "learning_management_system"}],
+      "conditions": []
+    },
+    {
+      "id": 11, "sentence": "Users in the academic affairs office can upload and download course rosters in the academic information and learning management systems.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "staff", "entity_type": "user", "position": "academic_affairs_office"}],
+      "actions": [{"verb": "upload", "operation": "UPLOAD"}, {"verb": "download", "operation": "DOWNLOAD"}],
+      "resource": {"label": "course rosters", "entity_type": "roster"},
+      "environments": [
+        {"id": "env_1", "env_type": "network", "namespace": "academic_information_system"},
+        {"id": "env_2", "env_type": "network", "namespace": "learning_management_system"}
+      ],
+      "conditions": []
+    },
+    {
+      "id": 12, "sentence": "Civilian students can view and download their own transcripts in the academic information system.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "student", "entity_type": "user", "membership": "civilian"}],
+      "actions": [{"verb": "view", "operation": "READ"}, {"verb": "download", "operation": "DOWNLOAD"}],
+      "resource": {"label": "transcripts", "entity_type": "transcript"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "academic_information_system"}],
+      "conditions": []
+    },
+    {
+      "id": 13, "sentence": "A department chair can view and download the transcripts of all civilian students in the academic information system for that department.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "department_chair", "entity_type": "user"}],
+      "actions": [{"verb": "view", "operation": "READ"}, {"verb": "download", "operation": "DOWNLOAD"}],
+      "resource": {"label": "transcripts", "entity_type": "transcript"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "academic_information_system"}],
+      "conditions": []
+    },
+    {
+      "id": 14, "sentence": "Applicants can check the status of their own applications in the academic information system.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "applicant", "entity_type": "user"}],
+      "actions": [{"verb": "check", "operation": "CHECK"}],
+      "resource": {"label": "status", "entity_type": "status"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "academic_information_system"}],
+      "conditions": []
+    },
+    {
+      "id": 15, "sentence": "Applicants can delete applications in the academic information system only if the applications are currently pending.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "applicant", "entity_type": "user"}],
+      "actions": [{"verb": "delete", "operation": "DELETE"}],
+      "resource": {"label": "applications", "entity_type": "application"},
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "academic_information_system"}],
+      "conditions": [{"text": "the applications are currently pending", "kind": "restriction"}]
+    },
+    {
+      "id": 16, "sentence": "Civilian students cannot register for courses in the course registration system if they owe tuition fees exceeding the prescribed limit.",
+      "decision": "deny", "modality": "cannot",
+      "subjects": [{"role": "student", "entity_type": "user", "membership": "civilian"}],
+      "actions": [{"verb": "register", "operation": "REGISTER"}],
+      "resource": null,
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "course_registration_system"}],
+      "conditions": [{"text": "they owe tuition fees exceeding the prescribed limit", "kind": "condition"}]
+    },
+    {
+      "id": 17, "sentence": "Civilian students cannot register for courses in the course registration system if the system has not been activated.",
+      "decision": "deny", "modality": "cannot",
+      "subjects": [{"role": "student", "entity_type": "user", "membership": "civilian"}],
+      "actions": [{"verb": "register", "operation": "REGISTER"}],
+      "resource": null,
+      "environments": [{"id": "env_1", "env_type": "network", "namespace": "course_registration_system"}],
+      "conditions": [{"text": "the system has not been activated", "kind": "condition"}]
+    },
+    {
+      "id": 18, "sentence": "Civilian students can register for graduation project topics only when the system is activated.",
+      "decision": "permit", "modality": "can",
+      "subjects": [{"role": "student", "entity_type": "user", "membership": "civilian"}],
+      "actions": [{"verb": "register", "operation": "REGISTER"}],
+      "resource": {"label": "graduation project topics", "entity_type": "graduation_project_topic"},
+      "environments": [],
+      "conditions": [{"text": "the system is activated", "kind": "restriction"}]
+    },
+    {
+      "id": 19, "sentence": "Civilian students' class schedules are only allowed in the academic information system between 7:00 am and 5:25 pm.",
+      "decision": "permit", "modality": "can only",
+      "subjects": [{"role": "student", "entity_type": "user", "membership": "civilian"}],
+      "actions": [],
+      "resource": {"label": "class schedules", "entity_type": "class_schedule"},
+      "environments": [
+        {"id": "env_1", "env_type": "network", "namespace": "academic_information_system"},
+        {"id": "env_2", "env_type": "temporal", "trigger_phrase": "between 7:00 am and 5:25 pm", "time_from": "07:00", "time_to": "17:25"}
+      ],
+      "conditions": []
+    },
+    {
+      "id": 20, "sentence": "A retired visiting lecturer cannot teach more than 560 hours per year.",
+      "decision": "deny", "modality": "cannot",
+      "subjects": [{"role": "visiting_lecturer", "entity_type": "user", "position": "retired"}],
+      "actions": [{"verb": "teach", "operation": "TEACH"}],
+      "resource": null,
+      "environments": [],
+      "conditions": []
+    }
+  ]
+}
